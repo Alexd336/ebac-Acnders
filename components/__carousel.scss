@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  background-image: url('../img/CONTAINER GRID 1.png');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  text-align: center;
+
+  .carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    scroll-behavior: smooth;
+  }
+
+  .slide {
+    position: relative;
+    flex: 0 0 auto;
+    width: 250px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+
+    p {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+
+    &.center-image {
+      transform: scale(1.2);
+      z-index: 2;
+    }
+
+    &:not(.center-image) {
+      opacity: 0.6;
+    }
+  }
+
+  .indicators {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #888;
+      margin: 0 5px;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background: white;
+      }
+    }
+  }
+}
+
+
+.carrusel::-webkit-scrollbar {
+  display: none; /* Oculta la barra en Chrome, Safari y Opera */
+}
+
+.carrusel {
+  -ms-overflow-style: none;  /* Oculta la barra en IE y Edge */
+  scrollbar-width: none;  /* Oculta la barra en Firefox */
+}

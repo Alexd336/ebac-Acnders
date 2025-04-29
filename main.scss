@@ -1,0 +1,38 @@
+// Utils
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/helpers';
+@import 'utils/responsive';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/variables';
+@import 'base/fonts';
+
+// Layout
+@import 'layout/container';
+@import 'layout/grid';
+@import 'layout/sections';
+@import 'layout/__auth';
+
+// Components
+@import 'components/header';
+
+@import 'components/video';
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/searchbar';
+@import 'components/footer';
+@import 'components/__input';
+
+
+// MAIN PAGE
+@import 'components/_header-v2';
+@import 'components/_carousel';
+@import 'components/_user-progress';
+@import 'components/_collage';
+@import 'components/_populares';
+@import 'components/_leaderboard';
+@import 'components/_cineastas';

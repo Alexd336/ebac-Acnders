@@ -1,0 +1,48 @@
+.cursos-populares {
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 50%, #000 100%),
+              url('../img/diagonal-squares.webp');
+  padding: 2rem;
+  color: white;
+  row flex-nowrap
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .carrusel {
+    gap: 1rem;
+    padding-bottom: 1rem;
+  
+
+    .curso-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+      padding: 0.5rem;
+      width: 200px;
+      
+     
+      transition: transform 0.3s ease;
+      text-align: center;
+      color: white;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      }
+
+      p {
+        margin-top: 0.75rem;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+// components/_header.scss
+.header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    
+    @include respond-to('small') {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px 20px;
+    }
+  
+    @include respond-to('medium') {
+      padding: 20px 40px;
+    }
+  
+    &.__logo {
+      width: 200px;
+      height: auto;
+      flex-shrink: 0; 
+  
+    &.__nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem; 
+
+      @include respond-to('small') {
+        width: 150px;
+        margin-bottom: 0;
+      }
+    }
+    
+      @include respond-to('medium') {
+        gap: 3rem;
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  
+    &.__search {
+      margin-left: auto; 
+      padding-left: 2rem;
+      
+      @include respond-to('small') {
+        width: 200px;
+      }
+  
+      @include respond-to('medium') {
+        width: 250px;
+        padding: 8px 16px;
+      }
+  
+      input {
+        font-size: 12px;
+  
+        @include respond-to('small') {
+          font-size: 14px;
+        }
+      }
+    }
+  }

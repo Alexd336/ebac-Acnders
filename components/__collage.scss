@@ -1,0 +1,67 @@
+.collage {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 150px 1fr 150px;
+    gap: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    z-index: 10;
+  
+    .image-container-2 {
+      overflow: hidden;
+      border-radius: map-get($border-radius, medium);
+      filter: drop-shadow(0 4px 6px $shadow-color);
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.8);
+          object-fit: cover;
+        }
+      }
+    }
+  
+    // Posicionamiento de las imágenes
+    .top-center {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      height: 150px;
+    }
+  
+    .down-center {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      height: 150px;
+    }
+  
+    .center {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      height: 450px;
+    }
+  
+    .left-middle {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  
+    .right-middle {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+  
+    .corner-tl, .corner-tr, .corner-bl, .corner-br {
+      height: 150px;
+    }
+  
+    .corner-tl { grid-area: 1 / 1 / 2 / 2; }
+    .corner-tr { grid-area: 1 / 3 / 2 / 4; }
+    .corner-bl { grid-area: 3 / 1 / 4 / 2; }
+    .corner-br { grid-area: 3 / 3 / 4 / 4; }
+  }

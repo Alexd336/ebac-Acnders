@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - ACNDERS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="bg-pattern text-white">
+    <header class="header-v2" >
+        <nav class="nav-v2">
+           
+            <ul class="nav-links">
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Membresías</a></li>
+                <li><a href="#">Masters</a></li>
+            </ul>
+            <div class="logo">
+                <a href="#">ACNDERS</a>
+            </div>
+            <div class="right-elements">
+                <div class="search-bar">
+                    <div class="icon">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
+                                <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <input type="text" placeholder="">
+                    <div class="icon settings">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                        </svg>
+                    </div> 
+    
+                </div>
+                <a href="#" class="cart-icon">
+                    <img src="img/ICONS/RECORDATORIOS.png" alt="Carrito">
+                </a>
+                <a href="#" class="cart-icon">
+                    <img src="img/ICONS/CARRITO.png" alt="Carrito">
+                </a>
+               
+            </div>
+        </nav>
+    </header>
+
+  <main class="auth-container d-flex flex-column align-items-center justify-content-center min-vh-100 px-3">
+    <div class="position-absolute top-0 start-0 p-3" style="z-index: 5;">
+        <a href="#" class="btn btn-outline-info rounded-circle shadow border-2 fw-bold fs-4">&larr;</a>
+      </div>
+    <div class="auth-box p-4 rounded-4 shadow-lg">
+      <div class="d-flex justify-content-center mb-4">
+        <a class="tab-btn active" href="registrarse.html">Registrarse</a>
+        <a class="tab-btn" href="IniciarSesion.html">Iniciar Sesión</a>
+      </div>
+    
+      
+      <form class="auth-form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control glassy-input" id="name" placeholder="¿Cuál es tu nombre?" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control glassy-input" id="email" placeholder="Tucorreo@gmail.com" />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <div class="position-relative">
+            <input type="password" class="form-control glassy-input pe-5" id="password" placeholder="Debe tener 8 caracteres" />
+            <button type="button" class="btn position-absolute end-0 top-0 mt-1 me-2 text-white">👁</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="remember" />
+            <label class="form-check-label" for="remember">Recordarme</label>
+          </div>
+          <a href="#" class="text-info small">Olvidé mi contraseña</a>
+        </div>
+        <a type="submit" class="btn btn-neon w-100 mb-3" href="main.html">Registrarse</a>
+        <div class="d-flex justify-content-evenly">
+          <button class="btn btn-outline-light rounded-circle">G</button>
+          <button class="btn btn-outline-light rounded-circle">f</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

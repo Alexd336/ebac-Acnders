@@ -1,0 +1,46 @@
+.search-bar {
+    @include gradient-border(linear-gradient(to bottom, $white, #1CD5CF));
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 20px;
+    padding: 8px 16px;
+    width: 200px;
+    overflow: hidden;
+    
+    input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #D2F7F5;
+      font-size: 14px;
+      min-width: 0;
+      
+      &::placeholder {
+        color: #68E3DF;
+      }
+    }
+    
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0px;
+      cursor: pointer;
+      flex-shrink: 0;
+      
+      svg {
+        fill: #1CD5CF;
+        width: 20px;
+        height: 20px;
+      }
+      
+      &.settings svg {
+        margin-left: 8px;
+        fill: #1CD5CF;
+        color: #68E3DF;
+      }
+    }
+  }

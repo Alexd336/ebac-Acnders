@@ -1,0 +1,44 @@
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  video-overlay {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba($black, 0.5);
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(color(darker), 0.8) 0%,
+        rgba(color(darker), 0.5) 50%,
+        rgba(color(darker), 0.8) 100%
+      );
+  }
+  
+  content-over-video {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-top: 20vh;
+    color: $white;
+    
+  }
+  

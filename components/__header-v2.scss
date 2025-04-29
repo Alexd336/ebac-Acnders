@@ -1,0 +1,100 @@
+.header-v2 {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  
+    .nav-v2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 1rem;
+  
+      @include respond-to('medium') {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem;
+      }
+  
+      .left-elements,
+      .right-elements {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+  
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        list-style: none;
+  
+        @include respond-to('medium') {
+          flex-direction: row;
+          gap: 1.5rem;
+        }
+  
+        li:first-child {
+          margin-left: 0;
+  
+          @include respond-to('medium') {
+            margin-left: 1rem;
+          }
+        }
+  
+        li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+         
+        }
+      }
+  
+      .logo {
+        order: -1;
+  
+        @include respond-to('medium') {
+          order: 0;
+          flex: 1;
+          text-align: center;
+        }
+  
+        a {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+          text-decoration: none;
+        }
+      }
+  
+      &__mobile-menu {
+        display: block;
+  
+        @include respond-to('medium') {
+          display: none;
+        }
+      }
+  
+      .cart-icon img,
+      .profile-icon img {
+        width: 24px;
+        height: 24px;
+      }
+  
+      .profile-icon img {
+        width: 40px;
+        height: 40px;
+  
+        @include respond-to('medium') {
+          width: 52px;
+          height: 52px;
+        }
+      }
+    }
+  }
+  

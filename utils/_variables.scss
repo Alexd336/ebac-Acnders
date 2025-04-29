@@ -1,0 +1,44 @@
+// Colores
+$black: #000;
+$white: #fff;
+$primary: #00c9a7;
+$primary-hover: #00b590;
+$secondary: #00c4cc;
+$secondary-hover: #00a6a6;
+$accent: #ff9e45;
+$accent-hover: #e88a35;
+$text-color: #e5e5e5;
+$dark-bg: #0b0b0b;
+$footer-bg: #111;
+
+// Fuentes
+$font-main: 'Comfortaa', Arial, Helvetica, sans-serif;
+$font-heading: 'Bebas Neue', Arial, Helvetica, sans-serif;
+
+// Breakpoints
+$breakpoints: (
+  'tiny': 300px,
+  'small': 480px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1200px
+);
+
+
+$colors: (
+  primary: #00c9a7,
+  primary-dark: #007a6e,
+  secondary: #00c4cc,
+  accent: #ff9e45,
+  dark: #0b0b0b,
+  darker: #000,
+  light: #fff,
+  gray: #e5e5e5,
+  text-light: #f5cba7,
+  text-dark: #333
+);
+
+// Función para acceder a los colores
+@function color($key) {
+  @return map-get($colors, $key);
+}

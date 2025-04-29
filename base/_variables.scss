@@ -1,0 +1,26 @@
+// Colores
+$black: #000;
+$white: #fff;
+$primary-gradient: linear-gradient(to bottom, white, #1CD5CF);
+$text-color: aliceblue;
+$progress-color: #f39c12;
+$shadow-color: #2AEEF1;
+$glass-effect: rgba(255, 255, 255, 0.268);
+
+// Tamaños
+$header-height: 52px;
+$icon-size: 52px;
+$small-icon-size: 22px;
+$search-icon-size: 20px;
+$border-radius: (
+  small: 5px,
+  medium: 8px,
+  large: 15px,
+  xlarge: 20px,
+  circle: 50%
+);
+
+
+$neon-blue: #00f7ff;
+$dark-bg: #121212;
+$input-bg: rgba(255, 255, 255, 0.05);

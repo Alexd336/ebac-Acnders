@@ -1,0 +1,53 @@
+// Variables (ajústalas si ya tienes tus propias)
+$dark-bg: #000;
+$glass-bg: rgba(0, 0, 0, 0.6);
+$neon-cyan: #00f2ff;
+
+// Contenedor principal con curva y sombra
+.auth-container {
+  background: url('img/diagonal-squares\ 16.svg'), $dark-bg;
+  border-top-left-radius: 400px;
+  border-top-right-radius: 400px;
+  box-shadow: 0 -80px 100px rgba(0, 255, 255, 0.1); // sombra difusa superior
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+  
+  box-shadow:
+    0 -8px 30px rgba(0, 255, 255, 0.9), // neón superior
+    0 0 60px rgba(0, 255, 255, 0.2);
+
+  @media (max-width: 768px) {
+    border-radius: 40px 40px 0 0;
+  }
+}
+
+// Caja interna con efecto glass
+.auth-box {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: $glass-bg;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+// Efecto de oscuridad lateral en fondo
+.bg-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    transparent 50%,
+    transparent 70%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}

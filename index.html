@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACNDERS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Hero Section con Video Background -->
+    <section class="hero-section">
+        <!-- Video de fondo -->
+        <div class="video-background-container">
+            <video autoplay loop muted playsinline class="video-background">
+                <source src="video/MAIN VIDEO.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <!-- Header (sobre el video) -->
+        <header class="header">
+            <div class="logo">
+                <svg width="150" height="74" viewBox="0 0 116 74" fill="none">
+                    <g clip-path="url(#clip0_2799_11785)">
+                    <path d="M115.337 39.5565C114.008 46.1406 113.064 52.0697 109.621 57.7575C106.772 62.4801 102.897 66.2375 98.4944 68.9608C92.4586 72.701 86.0706 73.7179 79.2662 73.7179C72.7821 73.7179 66.0899 72.7871 60.0861 69.8226C49.7916 64.7552 45.0846 53.9139 44.252 41.5731C43.3395 28.0947 46.5255 13.7372 57.2363 6.49817C63.5923 2.20645 70.925 0.965474 78.1455 0.241569C82.3882 -0.189326 86.2627 0.0519755 90.4733 0.741408C92.3465 1.05165 94.1717 1.3619 96.0609 1.32743C97.9021 1.29295 99.7752 0.655229 101.616 1.03442C101.616 2.55117 101.312 4.48158 101.616 5.96386C101.921 7.48061 103.362 7.98045 104.418 8.87671C106.5 10.6348 108.261 12.8237 109.702 15.2712C111.078 17.6153 112.167 20.1662 113.048 22.786C114.28 26.4055 114.585 29.9906 115.337 33.7135V39.5909V39.5565ZM102.177 58.5331C101.937 58.8778 101.809 59.0847 101.664 59.2398C98.2223 62.911 93.9956 66.0135 89.3366 67.151C86.5669 67.8232 85.0459 66.3582 82.8045 64.6691C80.8032 63.1695 78.4017 61.7734 76.8487 59.6707C78.866 59.4983 80.9633 59.9292 83.0126 59.8775C85.254 59.8086 87.4795 59.5673 89.7049 59.2742C91.1298 59.0847 101.953 56.7578 102.273 57.8954C102.513 56.7751 103.169 57.3438 103.746 57.3266C103.714 57.8781 103.682 58.3435 103.634 59.0674C115.225 45.4339 113.96 24.0615 101.712 11.6172C101.328 14.5818 104.466 16.8741 105.843 19.1837C107.396 21.7863 108.581 24.682 109.477 27.6465C110.614 31.4384 109.621 33.1275 107.636 36.161C106.051 38.5913 104.674 42.2797 102.545 44.124C102.833 39.5048 103.265 35.1269 102.849 30.4732C102.705 28.8703 102.177 18.3219 100.272 18.6839C99.9033 17.374 99.8393 16.0123 99.2789 14.8231C99.6792 17.8393 100.272 20.8039 100.432 23.8891C95.5806 16.2019 88.7603 11.014 82.5323 5.0676C88.1999 4.79183 93.3071 6.56711 97.9021 10.2901C96.3331 4.99865 88.0878 3.75768 83.8451 3.44743C78.9941 3.10272 72.1417 3.58532 69.2119 8.56647C72.2858 6.99801 76.7206 4.13686 80.1628 5.36061C83.4129 6.51541 86.823 10.8071 89.0805 13.5993C84.8858 13.3063 80.7552 13.2029 76.5445 13.5649C74.5913 13.7372 66.3461 13.3925 66.1539 16.3226C68.0111 16.1502 69.8203 15.6332 71.8215 15.7366C69.484 18.2875 64.4889 21.838 64.6009 25.9402C67.6429 22.6137 70.2205 18.1151 74.095 15.9606C78.0815 13.7372 84.3575 14.1164 88.6322 14.9782C92.8108 15.8227 95.7887 19.4078 98.2703 23.1135C101.28 27.5948 102.225 33.0241 101.793 38.6085C101.072 47.9503 95.0362 56.7233 86.5989 58.016C82.6924 58.6193 76.5285 59.257 73.1023 56.5855C69.6602 53.8967 66.202 49.1741 64.3608 44.9168C64.3928 46.0371 64.3128 48.071 64.8091 49.0534C65.1933 49.829 66.25 50.8459 66.7783 51.5526C68.3633 53.6898 70.2525 55.6203 72.0937 57.4645C74.095 59.4638 76.1763 61.3253 78.3216 63.1006C79.3943 63.9969 80.483 64.8587 81.5877 65.7032C82.2601 66.2203 83.8772 66.858 84.1654 67.7715C80.2108 68.8229 75.8561 67.6164 72.1097 66.1513C76.4965 70.5809 84.3575 69.9605 89.6568 68.4437C92.4266 67.6509 95.1003 66.3754 97.5338 64.6691C99.9674 62.9455 101.825 62.0837 102.209 58.5848L102.177 58.5331Z" fill="white"/>
+                    <path d="M67.7393 73.0801H43.7241C43.628 72.3389 43.628 72.3217 44.2044 72.3217C45.8694 72.3217 47.5505 72.3217 49.2316 72.3217C49.2796 71.615 49.0234 71.0807 48.7993 70.5464C45.9175 63.8934 43.0196 57.2403 40.1378 50.5701C39.9457 50.1219 39.7055 49.9841 39.2893 49.9841C32.3088 49.9841 25.3124 49.9841 18.332 49.9841C17.8997 49.9841 17.6756 50.1737 17.4995 50.6045C15.114 56.413 12.6804 62.2043 10.3269 68.03C9.31828 70.5119 9.47838 71.9597 12.3762 72.201C14.0893 72.3389 15.7864 72.27 17.4995 72.3217C17.7876 72.3217 18.268 72.0976 18.2359 72.7526C18.2039 73.3041 17.7716 73.0973 17.5155 73.0973C11.9279 73.0973 6.3564 73.0973 0.768861 73.0973C0.496689 73.0973 0.00037442 73.3386 0.0163846 72.7009C0.0323947 72.0804 0.512699 72.3561 0.800882 72.3217C1.80952 72.2183 2.81816 72.201 3.81079 72.0631C6.24433 71.7357 7.97343 70.2706 9.0301 67.7197C10.9353 63.0833 12.8565 58.4468 14.7777 53.8104C21.7261 36.9193 28.6906 20.0282 35.655 3.1371C35.8471 2.67173 36.0552 2.18913 36.2473 1.72376C36.9198 0.0863607 37.4161 -0.189412 38.9851 0.103596C39.3373 0.17254 39.4334 0.431077 39.5454 0.689614C41.8029 5.72247 44.0443 10.7553 46.3017 15.7882C46.4778 16.1674 46.4778 16.4776 46.3017 16.8568C43.7401 22.4585 42.7955 28.4738 42.5874 34.7304C42.4113 40.1424 42.7315 45.4855 44.0443 50.708C46.75 61.4804 53.042 68.1678 62.2638 71.4426C64.057 72.0804 65.8981 72.5457 67.7233 73.0628L67.7393 73.0801ZM39.5935 48.9844C35.9111 40.4871 32.2928 32.1622 28.5785 23.5788C25.0563 32.1795 21.6301 40.5216 18.1719 48.9844H39.5935Z" fill="white"/>
+                    <path d="M110.566 34.8163C110.182 40.9006 109.493 47.3985 106.548 52.6381C105.123 55.1718 103.522 55.7234 101.024 56.1715C98.4304 56.6541 95.7727 57.5676 93.131 57.085C93.4032 55.6199 96.3011 54.017 97.2937 53.0001C98.8947 51.3627 100.336 49.5357 101.712 47.657C104.482 43.8479 106.948 39.7458 109.541 35.7815C109.798 35.4023 110.07 35.0231 110.582 34.7991L110.566 34.8163Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2799_11785">
+                    <rect width="115.337" height="73.7176" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+            </div>
+            
+            <div class="search-bar">
+                <div class="icon-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24">
+                        <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                    </svg>
+                </div>
+                <input type="text" placeholder="">
+                <div class="icon-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido Hero (sobre el video) -->
+        <div class="overlay">
+            <div class="hero-content">
+              <h1>CREA HISTORIAS QUE INSPIRAN Y TRASCIENDEN, DOMINA EL ARTE VISUAL</h1>
+              <p>Produce <b>historias</b> visuales que <em>inspiran y dejan huella.</em> Tu plataforma integral para dominar el arte visual.</p>
+              
+              <div class="hero-buttons">
+                <a class="btn btn-primary"   href="registrarse.html" >INSCRIBIRSE <img src="img/Flecha.svg" alt=""></a>
+                <a class="btn btn-secondary" href="registrarse.html" >CONTACTAR <img src="img/flecha-verde.svg" alt=""></a>
+              </div>
+              
+              <div class="explore-link-container">
+                <a class="explore-link" href="registrarse.html">Explorar sitio</a>
+                <img src="img/flecha-verde.svg" alt="">
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Card Sections -->
+        <section class="card-section">
+            <div class="container">
+                <div class="left-section">
+                    <div class="card">
+                        <img src="img/FILM.jpg" alt="Cameraman" class="card-image">
+                        <div class="card-overlay">
+                            <h2 class="card-title">DESCUBRE TU POTENCIAL</h2>
+                            <h1 class="card-highlight">CREATIVO</h1>
+                            <button class="card-button">EXPLORAR MÁS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <h2 class="right-title">DESCUBRE LOS SECRETOS AUDIOVISUALES EN</h2>
+                    <h1 class="right-highlight">ACNDERS</h1>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="TuCorreo@ejemplo.com" class="email-input">
+                        <button type="submit" class="submit-button">ENVIAR</button>
+                    </form>
+                    <p class="form-description">
+                        Cada semana te ofrecemos contenidos exclusivos que descomponen las tendencias y técnicas más recientes del mundo audiovisual.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Repeat similar structure for other card sections -->
+        <section class="card-section">
+            <div class="container">
+                <div class="left-section">
+                    <div class="card">
+                        <img src="img/behindscenes.jpg" alt="Behind the scenes" class="card-image">
+                        <div class="card-overlay">
+                            <h2 class="card-title">DESCUBRE TU POTENCIAL</h2>
+                            <h1 class="card-highlight">CREATIVO</h1>
+                            <button class="card-button">EXPLORAR MÁS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <!-- Optional content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Section -->
+        <section class="promo-section">
+            <div class="container">
+                <div class="text-content">
+                    <h1>SABEMOS QUE ESTÁS LISTO PARA DESTACAR</h1>
+                    <p>Accede a nuestros mejores contenidos y da el siguiente paso en tu carrera.</p>
+                    <div class="brand">ACNDERS</div>
+                    <a href="#" class="btn">INSCRIBIRSE</a>
+                </div>
+                <div class="image-container">
+                    <img src="img/profesores/profesor1.jpg" alt="Promotional Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="image-container">
+                <img src="img/profesores/profesor2.jpg" alt="Instructor">
+            </div>
+            <div class="image-container">
+                <img src="img/profesores/profesor3.jpg" alt="Instructor">
+            </div>
+            <div class="image-container">
+                <img src="img/profesores/profesor4.jpg" alt="Instructor">
+            </div>
+            <div class="image-container">
+                <img src="img/profesores/profesor5.jpg" alt="Instructor">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Planes y Servicios</h4>
+                <ul>
+                    <li>Plan Mensual</li>
+                    <li>Plan Semestral</li>
+                    <li>Plan Anual</li>
+                    <li>Compras</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Por Qué ACNDERS</h4>
+                <ul>
+                    <li>Calidad educativa</li>
+                    <li>Expertos reconocidos</li>
+                    <li>Reseñas</li>
+                    <li>Flexibilidad</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Trabaja Con Nosotros</h4>
+                <ul>
+                    <li>Cursos</li>
+                    <li>Carreras</li>
+                    <li>Certificaciones</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Centro de Ayuda</h4>
+                <ul>
+                    <li>Contacto</li>
+                    <li>FAQs</li>
+                    <li>Soporte</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Compañía</h4>
+                <ul>
+                    <li>Acerca de</li>
+                    <li>Noticias</li>
+                    <li>Carreras</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li>Términos y Condiciones</li>
+                    <li>Política de Privacidad</li>
+                </ul>
+            </div>
+
+    
+        </div>
+        <div class="social">
+            <a href="#"><i class="icon-youtube"></i></a>
+            <a href="#"><i class="icon-instagram"></i></a>
+            <a href="#"><i class="icon-facebook"></i></a>
+            <a href="#"><i class="icon-tiktok"></i></a>
+            <a href="#"><i class="icon-link"></i></a>
+        </div>
+        <div class="help-bubble">
+            <button>AYUDA</button>
+        </div>
+    </footer>
+</body>
+</html>

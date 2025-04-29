@@ -1,0 +1,115 @@
+.user-progress {
+  position: relative;
+  padding: 6rem 1rem 3rem;
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%),
+    url('../img/diagonal-squares.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  background-blend-mode: normal;
+  opacity: 0.9;
+
+  &__header {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    color: #e4d0c4;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__my-courses {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e4d0c4;
+    font-size: 1rem;
+    font-weight: 500;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .courses {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-top: 4rem;
+
+    // Limita visualmente a solo 3 elementos visibles
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .course-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    width: 240px;
+    flex: 0 0 auto;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &__image {
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 1.5rem;
+      }
+    }
+
+    &__info {
+      padding: 0.75rem 1rem;
+      text-align: left;
+
+      p {
+        font-size: 0.9rem;
+        color: #fff;
+        font-weight: bold;
+        margin: 0 0 0.5rem;
+      }
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 5px;
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .progress {
+        height: 100%;
+        background: #00c3ff;
+        border-radius: 5px;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.12);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+      z-index: 10;
+    }
+
+    &.center-image {
+      z-index: 2;
+    }
+  }
+}
