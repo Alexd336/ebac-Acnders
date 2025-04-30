@@ -219,6 +219,7 @@ p {
 }
 
 .auth-container {
+  position: relative;
   background: url("img/diagonal-squares 16.svg"), #000;
   border-top-left-radius: 400px;
   border-top-right-radius: 400px;
@@ -235,6 +236,7 @@ p {
 }
 
 .auth-box {
+  position: relative;
   max-width: 400px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
@@ -647,6 +649,31 @@ content-over-video {
 .tab-btn.active {
   color: #00f7ff;
   border-bottom: 2px solid #00f7ff;
+}
+
+.back-btn-floating {
+  position: absolute;
+  top: 8rem;
+  left: 40%;
+  transform: translateX(-260px);
+  color: #ffffff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  z-index: 10;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.back-btn-floating:hover {
+  color: #cccccc;
+  transform: translateX(-260px) scale(1.1);
+}
+@media (max-width: 768px) {
+  .back-btn-floating {
+    left: 1rem;
+    transform: none;
+  }
 }
 
 .container {

@@ -5,6 +5,7 @@ $neon-cyan: #00f2ff;
 
 // Contenedor principal con curva y sombra
 .auth-container {
+  position: relative;
   background: url('img/diagonal-squares\ 16.svg'), $dark-bg;
   border-top-left-radius: 400px;
   border-top-right-radius: 400px;
@@ -24,6 +25,7 @@ $neon-cyan: #00f2ff;
 
 // Caja interna con efecto glass
 .auth-box {
+  position: relative;
   max-width: 400px;
   margin: 0 auto;
   background-color: $glass-bg;
