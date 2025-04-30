@@ -10,7 +10,12 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-style: normal;
-   
+    font-size: 2.5em;
+    background: linear-gradient(to right, #F7E0D0 0%, #F3D1B9 28%, #A28B7B 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    text-align: center;
   }
   
   h1 {
