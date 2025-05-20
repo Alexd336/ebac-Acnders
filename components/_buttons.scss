@@ -121,3 +121,28 @@
     }
   }
 
+// register
+.back-btn-floating {
+  position: absolute;
+  top: 8rem;
+  left: 40%;
+  transform: translateX(-260px); // ajusta este valor al ancho del .auth-box
+  color: #ffffff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  z-index: 10;
+  transition: 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    color: #cccccc; // ligero cambio en hover
+    transform: translateX(-260px) scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    left: 1rem;
+    transform: none;
+  }
+}
