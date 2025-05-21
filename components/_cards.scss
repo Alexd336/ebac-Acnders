@@ -183,11 +183,11 @@
   
   .image-container {
     flex: 1;
-   
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+      background: url('img/diagonal-squares 16.svg');
     
     img {
       width: 100%;
@@ -198,8 +198,6 @@
         box-shadow: 0 15px 30px rgba(76, 224, 224, 0.83);
       }
     }
-
-   
   }
 
 

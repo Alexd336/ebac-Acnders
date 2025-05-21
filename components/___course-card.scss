@@ -1,0 +1,271 @@
+/* Estilos generales para el contenedor de cursos */
+.courses {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.courses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Estilos para las tarjetas de curso - versión similar a la imagen */
+.course-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 400px; /* Altura fija para mantener consistencia */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  z-index: 1;
+}
+
+.course-card__title {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.course-card__price {
+  position: relative;
+  z-index: 2;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.course-card__btn {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(145deg, #00d0c2, #008fbb);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.course-card__btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos responsive */
+@media (max-width: 1024px) {
+  .courses__grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .course-card {
+    height: 350px;
+  }
+  
+  .course-card__title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses {
+    padding: 1rem;
+  }
+  
+  .courses__grid {
+    gap: 1.5rem;
+  }
+  
+  .course-card {
+    height: 300px;
+  }
+  
+  .course-card__title {
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem 0;
+  }
+  
+  .course-card__price {
+    font-size: 1rem;
+    margin: 0.8rem 1rem;
+  }
+  
+  .course-card__btn {
+    padding: 0.6rem 1.2rem;
+    margin: 0 1rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-card {
+    height: 280px;
+  }
+}
+
+
+
+
+
+
+
+
+// carrito card 
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 90%;
+  max-width: 380px;
+  height: 100%;
+  background-color: $light-bg;
+  box-shadow: $shadow;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: $radius 0 0 $radius;
+
+  &__title {
+    font-size: 1.25rem;
+    color: $dark-text;
+    margin-bottom: 1rem;
+  }
+
+  &__items {
+    flex-grow: 1;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__summary {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__checkout {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  &.open {
+    right: 0;
+  }
+}
+
+// badge
+
+.cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.25em 0.6em;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+
+
+//overlay
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $overlay-bg;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+// buttons
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  &__info {
+    flex: 1;
+    padding: 0 0.5rem;
+  }
+
+  &__qty {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    button {
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+    }
+  }
+}

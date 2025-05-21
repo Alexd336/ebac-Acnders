@@ -20,7 +20,7 @@
       left: 50%;
       right: 50%;
       width: 60%;
-      background: url('img/diagonal-squares 16.svg');
+      background:   url('img/diagonal-squares 16.svg');
       box-shadow: 0 4px 100px rgba(0, 196, 204, 0.9);
   
       @include respond-to('tiny') {

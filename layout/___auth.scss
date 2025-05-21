@@ -6,7 +6,7 @@ $neon-cyan: #00f2ff;
 // Contenedor principal con curva y sombra
 .auth-container {
   position: relative;
-  background: url('img/diagonal-squares\ 16.svg'), $dark-bg;
+   background: url('img/diagonal-squares 16.svg');
   border-top-left-radius: 400px;
   border-top-right-radius: 400px;
   box-shadow: 0 -80px 100px rgba(0, 255, 255, 0.1); // sombra difusa superior

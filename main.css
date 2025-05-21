@@ -226,7 +226,7 @@ p {
 
 .auth-container {
   position: relative;
-  background: url("img/diagonal-squares 16.svg"), #000;
+  background: url("img/diagonal-squares 16.svg");
   border-top-left-radius: 400px;
   border-top-right-radius: 400px;
   box-shadow: 0 -80px 100px rgba(0, 255, 255, 0.1);
@@ -836,6 +836,7 @@ content-over-video {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  background: url("img/diagonal-squares 16.svg");
 }
 .image-container img {
   width: 100%;
@@ -1035,6 +1036,622 @@ content-over-video {
   color: #fff;
 }
 
+.filters {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.filters__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+.filters__categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.filters__btn {
+  background: linear-gradient(145deg, #00d0c2, #008fbb);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.3), 0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.filters__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.filters__btn--active {
+  background: linear-gradient(145deg, #00f2e2, #00a6df);
+  box-shadow: inset 0 -4px 10px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+@media (max-width: 480px) {
+  .filters__btn {
+    font-size: 0.75rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .filters__categories {
+    gap: 0.75rem;
+  }
+}
+/* Estilos generales para el contenedor de cursos */
+.courses {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.courses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Estilos para las tarjetas de curso - versión similar a la imagen */
+.course-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 400px; /* Altura fija para mantener consistencia */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.7);
+  z-index: 1;
+}
+
+.course-card__title {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.course-card__price {
+  position: relative;
+  z-index: 2;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.course-card__btn {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(145deg, #00d0c2, #008fbb);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.course-card__btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos responsive */
+@media (max-width: 1024px) {
+  .courses__grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .course-card {
+    height: 350px;
+  }
+  .course-card__title {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .courses {
+    padding: 1rem;
+  }
+  .courses__grid {
+    gap: 1.5rem;
+  }
+  .course-card {
+    height: 300px;
+  }
+  .course-card__title {
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem 0;
+  }
+  .course-card__price {
+    font-size: 1rem;
+    margin: 0.8rem 1rem;
+  }
+  .course-card__btn {
+    padding: 0.6rem 1.2rem;
+    margin: 0 1rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .courses__grid {
+    grid-template-columns: 1fr;
+  }
+  .course-card {
+    height: 280px;
+  }
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 90%;
+  max-width: 380px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px 0 0 8px;
+}
+.cart__title {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.cart__items {
+  flex-grow: 1;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cart__summary {
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart__checkout {
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cart.open {
+  right: 0;
+}
+
+.cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.25em 0.6em;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.cart-item__info {
+  flex: 1;
+  padding: 0 0.5rem;
+}
+.cart-item__qty {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.cart-item__qty button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.recommendations {
+  padding: 4rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.recommendations__title {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.recommendations__carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__arrow {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0 1rem;
+  transition: color 0.2s;
+}
+.carousel__arrow:hover {
+  color: #fff;
+}
+.carousel__arrow--left {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.carousel__arrow--right {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Estilos del carrito */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-tray {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 380px;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px 0 0 8px;
+}
+
+.cart-tray.active {
+  right: 0;
+}
+
+.cart-header {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.item-count {
+  background-color: #ff0000;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-cart:hover {
+  color: #1CD5CF;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.empty-cart-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #888;
+}
+
+.empty-cart-message i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #1CD5CF;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.quantity-badge {
+  background-color: #1CD5CF;
+  color: #000;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.price-info span {
+  color: #aaa;
+}
+
+.price-info strong {
+  color: #fff;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+  background-color: #1CD5CF;
+  color: #000;
+}
+
+.quantity {
+  min-width: 20px;
+  text-align: center;
+}
+
+.remove-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.remove-item:hover {
+  color: #ff0000;
+}
+
+.cart-footer {
+  padding: 20px;
+  border-top: 1px solid #333;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #1CD5CF;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: #1ae0d9;
+}
+
+/* Badge del icono del carrito */
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animaciones */
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.bounce {
+  animation: bounce 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-tray {
+    width: 90%;
+  }
+  .cart-item {
+    flex-direction: column;
+  }
+  .cart-item-image {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    margin-bottom: 10px;
+  }
+}
 .header-v2 {
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -1212,7 +1829,7 @@ content-over-video {
   position: relative;
   padding: 6rem 1rem 3rem;
   background-color: #0a0a0a;
-  background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%), url("../img/diagonal-squares.webp");
+  background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%), url("img/diagonal-squares 16.svg");
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -1373,7 +1990,7 @@ content-over-video {
 }
 
 .cursos-populares {
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 50%, #000 100%), url("../img/diagonal-squares.webp");
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 50%, #000 100%), url("img/diagonal-squares 16.svg");
   padding: 2rem;
   color: white;
 }
@@ -1537,7 +2154,7 @@ content-over-video {
   position: relative;
   z-index: 10;
   padding-top: 50px;
-  background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%), url("../img/diagonal-squares.webp");
+  background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%), url("img/diagonal-squares 16.svg");
 }
 .cineastas h1 {
   font-size: 24px;

@@ -1,0 +1,63 @@
+.recommendations {
+  padding: 4rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+
+
+  &__title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.carousel__track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carousel__arrow {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0 1rem;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &--left {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  &--right {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
