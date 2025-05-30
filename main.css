@@ -544,6 +544,32 @@ content-over-video {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -836,7 +862,7 @@ content-over-video {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: url("img/diagonal-squares 16.svg");
+  /*    background: url('img/diagonal-squares 16.svg'); */
 }
 .image-container img {
   width: 100%;
@@ -971,6 +997,9 @@ content-over-video {
   margin: 8px 0;
   font-size: 14px;
 }
+.footer-section ul a {
+  color: #ebe0d9;
+}
 .footer .social {
   display: flex;
   justify-content: center;
@@ -978,7 +1007,7 @@ content-over-video {
   margin-top: 20px;
 }
 .footer .social a {
-  color: #d4af95;
+  color: #ebe0d9;
   font-size: 20px;
   text-decoration: none;
 }
@@ -1829,7 +1858,9 @@ content-over-video {
   position: relative;
   padding: 6rem 1rem 3rem;
   background-color: #0a0a0a;
-  background-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%), url("img/diagonal-squares 16.svg");
+  /* background-image:
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%),
+       url('img/diagonal-squares 16.svg'); */
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -1868,7 +1899,6 @@ content-over-video {
 .user-progress .courses {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   gap: 2rem;
   margin: 0 auto;
   max-width: 100%;
@@ -1876,7 +1906,7 @@ content-over-video {
   max-width: 100%;
   overflow: hidden;
 }
-.user-progress .course-card {
+.user-progress .course-cards {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 1.5rem;
   overflow: hidden;
@@ -1885,40 +1915,40 @@ content-over-video {
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.user-progress .course-card__image img {
+.user-progress .course-cards__image img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 1.5rem;
 }
-.user-progress .course-card__info {
+.user-progress .course-cards__info {
   padding: 0.75rem 1rem;
   text-align: left;
 }
-.user-progress .course-card__info p {
+.user-progress .course-cards__info p {
   font-size: 0.9rem;
   color: #fff;
   font-weight: bold;
   margin: 0 0 0.5rem;
 }
-.user-progress .course-card .progress-bar {
+.user-progress .course-cards .progress-bar {
   width: 100%;
   height: 5px;
   background-color: #333;
   border-radius: 5px;
   overflow: hidden;
 }
-.user-progress .course-card .progress-bar .progress {
+.user-progress .course-cards .progress-bar .progress {
   height: 100%;
   background: #00c3ff;
   border-radius: 5px;
 }
-.user-progress .course-card:hover {
+.user-progress .course-cards:hover {
   transform: scale(1.12);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
   z-index: 10;
 }
-.user-progress .course-card.center-image {
+.user-progress .course-cards.center-image {
   z-index: 2;
 }
 
@@ -1990,7 +2020,7 @@ content-over-video {
 }
 
 .cursos-populares {
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 50%, #000 100%), url("img/diagonal-squares 16.svg");
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.2) 20%, #000 100%), url("img/diagonal-squares 16.svg");
   padding: 2rem;
   color: white;
 }

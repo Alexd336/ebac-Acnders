@@ -9,29 +9,30 @@
 </head>
 <body>
 
-    <header class="header-v2" >
-        <nav class="nav-v2">
+    <header class="header-v2"  role="banner">
+        <nav class="nav-v2" aria-label="Navegación principal">
             <a href="#" class="community-icon">
-                <img src="img/ICONS/COMUNIDAD.png"  href="main.html" alt="Comunidad">
+                <img src="img/ICONS/COMUNIDAD.png"  href="main.html" alt="Ir a la comunidad de ACNDERS">
             </a>
-            <ul class="nav-links">
-                <li><a href="content.html">Cursos</a></li>
-                <li><a href="content.html">Membresías</a></li>
-                <li><a href="content.html">Masters</a></li>
+            <ul class="nav-links" role="menu">
+                <li role="menuitem"><a href="content.html">Cursos</a></li>
+                <li role="menuitem"><a href="content.html">Membresías</a></li>
+                <li role="menuitem"><a href="content.html">Masters</a></li>
             </ul>
             <div class="logo">
-                <a href="index.html">ACNDERS</a>
+                <a href="index.html" aria-label="ACNDERS - Página de inicio">ACNDERS</a>
             </div>
-            <div class="right-elements">
-                <div class="search-bar">
+            <div class="right-elements" >
+                <div class="search-bar"  role="search">
                     <div class="icon">
+                         <button type="button" aria-label="Buscar"></button>
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
                                 <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
                             </svg>
                         </a>
                     </div>
-                    <input type="text" placeholder="">
+                    <input type="text" >
                     <div class="icon settings">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
@@ -45,92 +46,100 @@
                 <a href="#" class="cart-icon">
                     <img src="img/ICONS/CARRITO.png" alt="Carrito">
                 </a>
-                <a href="registrarse.html"class="profile-icon">
+                 <a href="registrarse.html" class="profile-icon" aria-label="Perfil de usuario">
                     <img src="img/ICONS/PERFIL.png" alt="Usuario">
                 </a>
             </div>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="carousel-wrapper">
-          <div class="carousel-track">
-            <div class="slide active">
-              <img src="img/behindscenes.jpg" alt="Producción en filmación" />
-              <p>Producción en filmación</p>
-            </div>
-            <div class="slide center-image">
-              <img src="img/FILM.jpg" alt="Descubre tu potencial creativo" />
-              <p>Descubre tu potencial creativo</p>
-            </div>
-            <div class="slide">
-              <img src="img/behindscenes.jpg" alt="Producción en filmación" />
-              <p>Producción en filmación</p>
-            </div>
-          </div>
-          <div class="indicators">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
+    <section class="hero" aria-labelledby="hero-heading">
+            <h2 id="hero-heading" class="visually-hidden">Cursos destacados de ACNDERS</h2>
+        <div class="carousel-wrapper"  role="region" aria-label="Carrusel de cursos"></div>>
+            <div class="carousel-track">
+                    <div class="slide active" role="group" aria-label="Slide 1 de 3">
+                        <img src="img/behindscenes.jpg" alt="Equipo de producción filmando una escena en estudio">
+                        <p>Producción en filmación</p>
+                    </div>
+                    <div class="slide center-image" role="group" aria-label="Slide 2 de 3">
+                        <img src="img/FILM.jpg" alt="Cámara profesional grabando escena cinematográfica">
+                        <p>Descubre tu potencial creativo</p>
+                    </div>
+                    <div class="slide" role="group" aria-label="Slide 3 de 3">
+                        <img src="img/behindscenes.jpg" alt="Detrás de cámaras mostrando equipo de filmación">
+                        <p>Producción en filmación</p>
+                    </div>
+                </div>
+                <div class="indicators" role="tablist">
+                    <button type="button" role="tab" aria-selected="true" aria-controls="slide1" class="dot active"></button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="slide2" class="dot"></button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="slide3" class="dot"></button>
+                </div>
         </div>
     </section>
     
     
-    <section class="user-progress container">
-        <div class="user-progress__header">
-          <h2 class="user-progress__title">Hola, Alex! Continúa donde lo dejaste</h2>
-          <div class="user-progress__my-courses">
-            <img src="img/ICONS/guardados.png" alt="Mis cursos" />
+    <section class="user-progress container"  aria-labelledby="progress-heading">
+    <div class="user-progress__header ">
+        <h2 class="user-progress__title" id="progress-heading">Hola, Alex! Continúa donde lo dejaste</h2>
+        <div class="user-progress__my-courses">
+            <img src="img/ICONS/guardados.png" alt="Ícono de Mis cursos" />
             <span>Mis Cursos</span>
-          </div>
         </div>
-      
-        <div class="courses d-flex justify-content-center gap-3 mt-5">
-          <div class="course-card">
-            <div class="course-card__image">
-              <img src="img/carrusel/AFTER EFFECTS.jpg" alt="Curso de Lightroom">
-            </div>
-            <div class="course-card__info">
-              <p>Lightroom</p>
-              <div class="progress-bar"><div class="progress" style="width: 47%;"></div></div>
-            </div>
-          </div>
-      
-          <div class="course-card center-image">
-            <div class="course-card__image">
-              <img src="img/carrusel/DAVINCI RESOLVE.jpg" alt="Curso de Lightroom">
-            </div>
-            <div class="course-card__info">
-              <p>Lightroom</p>
-              <div class="progress-bar"><div class="progress" style="width: 47%;"></div></div>
-            </div>
-          </div>
-      
-          <div class="course-card">
-            <div class="course-card__image">
-              <img src="img/carrusel/PREMIER PRO.jpg" alt="Curso de Premiere Pro">
-            </div>
-            <div class="course-card__info">
-              <p>Lightroom</p>
-              <div class="progress-bar"><div class="progress" style="width: 47%;"></div></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
+    </div>
 
-    <section class="collage">
+    <div class="courses d-flex justify-content-center gap-3 mt-5" role="list">
+        <div class="course-cards" role="listitem">
+            <div class="course-cards__image">
+                <img src="img/carrusel/AFTER EFFECTS.jpg" alt="Imagen del curso de After Effects">
+            </div>
+            <div class="course-cards__info">
+                <p>After Effects</p>
+                <div class="progress-bar" role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" aria-labelledby="after-effects-progress">
+                    <div class="progress" style="width: 47%;"></div>
+                </div>
+                <span id="after-effects-progress" class="visually-hidden">47% completado</span>
+            </div>
+        </div>
+
+        <div class="course-cards center-image" role="listitem">
+            <div class="course-cards__image">
+                <img src="img/carrusel/DAVINCI RESOLVE.jpg" alt="Imagen del curso de DaVinci Resolve">
+            </div>
+            <div class="course-cards__info">
+                <p>DaVinci Resolve</p>
+                <div class="progress-bar" role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" aria-labelledby="davinci-resolve-progress">
+                    <div class="progress" style="width: 47%;"></div>
+                </div>
+                <span id="davinci-resolve-progress" class="visually-hidden">47% completado</span>
+            </div>
+        </div>
+
+        <div class="course-cards" role="listitem">
+            <div class="course-cards__image">
+                <img src="img/carrusel/PREMIER PRO.jpg" alt="Imagen del curso de Premiere Pro">
+            </div>
+            <div class="course-cards__info">
+                <p>Premiere Pro</p>
+                <div class="progress-bar" role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" aria-labelledby="premiere-pro-progress">
+                    <div class="progress" style="width: 47%;"></div>
+                </div>
+                <span id="premiere-pro-progress" class="visually-hidden">47% completado</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="collage" aria-label="Galería de trabajos audiovisuales">
         <!-- Imágenes superiores -->
         <div class="image-container-2 top-center">
             <img src="img/collage/UP.jpg" alt="Imagen superior">
         </div>
 
-         <!-- Imágenes inferior -->
+        <!-- Imágenes inferior -->
         <div class="image-container-2 down-center">
-          <img src="img/collage/DOWN.jpg" alt="Imagen superior">
-      </div>
+            <img src="img/collage/DOWN.jpg" alt="Imagen superior">
+        </div>
         
         <!-- Imágenes laterales -->
         <div class="image-container-2 left-middle">
@@ -161,113 +170,113 @@
         </div>
     </section>
 
-    <section class="cursos-populares">
-        <h2>Los estudiantes están viendo</h2>
-        <div class="carrusel row flex-nowrap overflow-auto">
-        <div class="col-auto">
+    <section class="cursos-populares" aria-labelledby="popular-courses">
+        <h2 id="popular-courses">Los estudiantes están viendo</h2>
+        <div class="carrusel row flex-nowrap overflow-auto" role="list" tabindex="0" aria-label="Lista de cursos populares">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
-              <img src="img/carrusel/AFTER EFFECTS.jpg" alt="DaVinci Resolve">
-              <p>DaVinci Resolve</p>
+                <img src="img/carrusel/AFTER EFFECTS.jpg" alt="DaVinci Resolve">
+                <p>DaVinci Resolve</p>
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
-              <img src="img/carrusel/AUDITION.jpg" alt="Luces, Sombras y Estilo">
-              <p>Luces, Sombras y Estilo</p>
+                <img src="img/carrusel/AUDITION.jpg" alt="Luces, Sombras y Estilo">
+                <p>Luces, Sombras y Estilo</p>
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
                 <img src="img/carrusel/DAVINCI RESOLVE.jpg" alt="Photoshop">
                 <p>Photoshop</p>
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
                 <img src="img/carrusel/FINAL CUT PRO.jpg" alt="Dominando la Luz en la Oscuridad">
                 <p>Dominando la Luz en la Oscuridad</p>
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
                 <img src="img/carrusel/LIGHTROOM2.0.jpg" alt="Dominando la Luz en la Oscuridad">
-              <p>Dominando la Luz en la Oscuridad</p>
+                <p>Dominando la Luz en la Oscuridad</p>
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
                 <img src="img/carrusel/DAVINCI RESOLVE.jpg" alt="Photoshop">
                 <p>Photoshop</p>
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
                 <img src="img/carrusel/FINAL CUT PRO.jpg" alt="Dominando la Luz en la Oscuridad">
                 <p>Dominando la Luz en la Oscuridad</p>
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto" role="listitem">
             <div class="curso-card">
                 <img src="img/carrusel/LIGHTROOM2.0.jpg" alt="Dominando la Luz en la Oscuridad">
-              <p>Dominando la Luz en la Oscuridad</p>
+                <p>Dominando la Luz en la Oscuridad</p>
             </div>
         </div>
         </div>
     </section>
     
-    <section class="cursos-populares">
-      <h2>Recomendaciones para ti</h2>
-      <div class="carrusel row flex-nowrap overflow-auto">
-      <div class="col-auto">
+    <section class="cursos-populares"  aria-labelledby="popular-courses">
+        <h2 id="Recomendaciones">Recomendaciones para ti</h2>
+        <div class="carrusel row flex-nowrap overflow-auto" role="list" tabindex="0" aria-label="Lista de Recomendaciones">
+        <div class="col-auto"  role="listitem">
         <div class="curso-card">
             <img src="img/carrusel/COLORGRADING.jpg" alt="DaVinci Resolve">
               <p>DaVinci Resolve</p>
         </div>
       </div>
 
-      <div class="col-auto">
+      <div class="col-auto"  role="listitem">
         <div class="curso-card">
             <img src="img/carrusel/PROMO.jpg" alt="Luces, Sombras y Estilo">
               <p>Luces, Sombras y Estilo</p>
         </div>
       </div>
 
-      <div class="col-auto">
+      <div class="col-auto"  role="listitem">
         <div class="curso-card">
             <img src="img/carrusel/FILMAKING-TO CRATIVES.jpg" alt="Dominando la Luz en la Oscuridad">
               <p>Dominando la Luz en la Oscuridad</p>
         </div>
       </div>
 
-      <div class="col-auto">
+      <div class="col-auto"  role="listitem">
         <div class="curso-card">
             <img src="img/carrusel/LIGHTROOM2.0.jpg" alt="Dominando la Luz en la Oscuridad">
             <p>Dominando la Luz en la Oscuridad</p>
         </div>
     </div>
 
-    <div class="col-auto">
+    <div class="col-auto"  role="listitem">
         <div class="curso-card">
             <img src="img/carrusel/PROMO.jpg" alt="Luces, Sombras y Estilo">
               <p>Luces, Sombras y Estilo</p>
         </div>
       </div>
 
-      <div class="col-auto">
+      <div class="col-auto"  role="listitem">
         <div class="curso-card">
             <img src="img/carrusel/FILMAKING-TO CRATIVES.jpg" alt="Dominando la Luz en la Oscuridad">
               <p>Dominando la Luz en la Oscuridad</p>
         </div>
       </div>
 
-      <div class="col-auto">
+      <div class="col-auto"  role="listitem">
         <div class="curso-card">
             <img src="img/carrusel/LIGHTROOM2.0.jpg" alt="Dominando la Luz en la Oscuridad">
             <p>Dominando la Luz en la Oscuridad</p>
@@ -277,18 +286,18 @@
 </div>
 </section>
 
-    <section class="leaderboard">
+    <section class="leaderboard" aria-labelledby="leaderboard-title">
         <div class="leaderboard__header">
             <h2 class="leaderboard__title">SUMERGIR</h2>
         </div>
-        <div class="video-background">
+        <div class="video-background" aria-hidden="true">
             <video autoplay loop muted playsinline>
                 <source src="video/tablero.mp4" type="video/mp4">
                 Tu navegador no soporta videos HTML5.
             </video>
         </div>
-        <ol class="leaderboard__list">
-            <li class="leaderboard__item">
+        <ol class="leaderboard__list"  role="list">
+            <li class="leaderboard__item"  role="listitem">
                 <span class="leaderboard__rank">#1</span>
                 <div class="leaderboard__profile">
                     <img src="img/user1.png" alt="Perfil de ZENECA" class="leaderboard__avatar">
@@ -298,7 +307,7 @@
                     </div>
                 <span class="leaderboard__score">20,999</span>
             </li>
-            <li class="leaderboard__item"> 
+            <li class="leaderboard__item"  role="listitem"> 
                 <span class="leaderboard__rank">#2</span>
                 <div class="leaderboard__profile">
                     <img src="img/user2.png" alt="Perfil de FAROKH" class="leaderboard__avatar">
@@ -308,7 +317,7 @@
                     </div>
                 <span class="leaderboard__score">17,327</span>
             </li>
-            <li class="leaderboard__item">
+            <li class="leaderboard__item"  role="listitem">
                 <span class="leaderboard__rank">#3</span>
                 <div class="leaderboard__profile">
                     <img src="img/user3.png" alt="Perfil de CORGIL" class="leaderboard__avatar">
@@ -325,8 +334,8 @@
         </div>
     </section>
     
-    <section class="cineastas">
-        <h1>CONTENIDO DE CINEASTAS EN LA COMUNIDAD DE <br> <strong>ACNDERS</strong></h1>
+    <section class="cineastas" aria-labelledby="cineastas-title">
+        <h1  id="cineastas-title">CONTENIDO DE CINEASTAS EN LA COMUNIDAD DE <br> <strong>ACNDERS</strong></h1>
         <div class="grid-container">
             <div class="grid-item wide">
                 <img src="img/cineastas/summer_lake.webp" alt="Summer Lake">
@@ -359,69 +368,70 @@
         </div>
     </section>
 
-    <footer class="footer">
+      <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-section">
                 <h4>Planes y Servicios</h4>
                 <ul>
-                    <li>Plan Mensual</li>
-                    <li>Plan Semestral</li>
-                    <li>Plan Anual</li>
-                    <li>Compras</li>
+                    <li><a href="#">Plan Mensual</a></li>
+                    <li><a href="#">Plan Semestral</a></li>
+                    <li><a href="#">Plan Anual</a></li>
+                    <li><a href="#">Compras</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Por Qué ACNDERS</h4>
                 <ul>
-                    <li>Calidad educativa</li>
-                    <li>Expertos reconocidos</li>
-                    <li>Reseñas</li>
-                    <li>Flexibilidad</li>
+                    <li><a href="#">Calidad educativa</a></li>
+                    <li><a href="#">Expertos reconocidos</a></li>
+                    <li><a href="#">Reseñas</a></li>
+                    <li><a href="#">Flexibilidad</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Trabaja Con Nosotros</h4>
                 <ul>
-                    <li>Cursos</li>
-                    <li>Carreras</li>
-                    <li>Certificaciones</li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Certificaciones</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Centro de Ayuda</h4>
                 <ul>
-                    <li>Contacto</li>
-                    <li>FAQs</li>
-                    <li>Soporte</li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Soporte</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Compañía</h4>
                 <ul>
-                    <li>Acerca de</li>
-                    <li>Noticias</li>
-                    <li>Carreras</li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Carreras</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Legal</h4>
                 <ul>
-                    <li>Términos y Condiciones</li>
-                    <li>Política de Privacidad</li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
                 </ul>
             </div>
 
     
         </div>
-        <div class="social">
-            <a href="#"><i class="icon-youtube"></i></a>
-            <a href="#"><i class="icon-instagram"></i></a>
-            <a href="#"><i class="icon-facebook"></i></a>
-            <a href="#"><i class="icon-tiktok"></i></a>
-            <a href="#"><i class="icon-link"></i></a>
+         <div class="social">
+            <a href="#" aria-label="YouTube"><span class="icon-youtube"></span></a>
+            <a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a>
+            <a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
+            <a href="#" aria-label="TikTok"><span class="icon-tiktok"></span></a>
+            <a href="#" aria-label="LinkedIn"><span class="icon-link"></span></a>
         </div>
         <div class="help-bubble">
-            <button>AYUDA</button>
+            <button aria-label="Ayuda">AYUDA</button>
         </div>
     </footer>
       

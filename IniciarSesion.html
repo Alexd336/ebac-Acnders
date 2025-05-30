@@ -3,87 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro - ACNDERS</title>
+  <title>Iniciar Sesión - ACNDERS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="main.css" />
 </head>
 <body class="bg-pattern text-white">
-    <header class="header-v2" >
-        <nav class="nav-v2">
-           
-            <ul class="nav-links">
-                <li><a href="content.html">Cursos</a></li>
-                <li><a href="content.html">Membresías</a></li>
-                <li><a href="content.html">Masters</a></li>
-            </ul>
-            <div class="logo">
-                <a href="#">ACNDERS</a>
-            </div>
-            <div class="right-elements">
-                <div class="search-bar">
-                    <div class="icon">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
-                                <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <input type="text" placeholder="">
-                    <div class="icon settings">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
-                        </svg>
-                    </div> 
-    
-                </div>
-                <a href="#" class="cart-icon">
-                    <img src="img/ICONS/RECORDATORIOS.png" alt="Carrito">
-                </a>
-                <a href="#" class="cart-icon">
-                    <img src="img/ICONS/CARRITO.png" alt="Carrito">
-                </a>
-               
-            </div>
-        </nav>
-    </header>
 
-  <main class="auth-container d-flex flex-column align-items-center justify-content-center min-vh-100 px-3">
-    <a href="index.html" class="back-btn-floating">&larr;</a>
-    <div class="auth-box p-4 rounded-4 shadow-lg">
-      <div class="d-flex justify-content-center mb-4">
-        <a class="tab-btn" href="registrarse.html">Registrarse</a>
-        <a class="tab-btn active"  href="IniciarSesion.html">Iniciar Sesión</a>
-       
+  <header class="header-v2" role="banner">
+    <nav class="nav-v2" role="navigation" aria-label="Navegación principal">
+      <ul class="nav-links">
+        <li><a href="content.html" aria-label="Ver cursos disponibles">Cursos</a></li>
+        <li><a href="content.html" aria-label="Ver membresías disponibles">Membresías</a></li>
+        <li><a href="content.html" aria-label="Ver masters disponibles">Masters</a></li>
+      </ul>
+      <div class="logo">
+        <a href="#" aria-label="Inicio ACNDERS">ACNDERS</a>
       </div>
+      <div class="right-elements">
+        <div class="search-bar" role="search">
+          <div class="icon">
+            <a href="#" aria-label="Buscar contenido">
+             
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
+                <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+              </svg>
+            </a>
+          </div>
+          <input type="text" placeholder="Buscar..." aria-label="Buscar contenido en ACNDERS" />
+          <div class="icon settings" aria-hidden="true">
+           
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+            </svg>
+          </div>
+        </div>
+        <a href="#" class="cart-icon" aria-label="Ver notificaciones"><img src="img/ICONS/RECORDATORIOS.png" alt="Notificaciones" /></a>
+        <a href="#" class="cart-icon" aria-label="Ver carrito de compras"><img src="img/ICONS/CARRITO.png" alt="Carrito de compras" /></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-container d-flex flex-column align-items-center justify-content-center min-vh-100 px-3" role="main">
+    <a href="index.html" class="back-btn-floating" aria-label="Volver a la página anterior">&larr;</a>
     
-      
-      <form class="auth-form">
-        
+    <section class="auth-box p-4 rounded-4 shadow-lg" aria-labelledby="tituloInicioSesion">
+     
+
+      <div class="d-flex justify-content-center mb-4" role="tablist">
+        <a class="tab-btn" href="registrarse.html" role="tab" aria-selected="false">Registrarse</a>
+        <a class="tab-btn active" href="IniciarSesion.html" role="tab" aria-selected="true">Iniciar Sesión</a>
+      </div>
+
+      <form class="auth-form needs-validation" novalidate aria-describedby="descripcionInicioSesion">
+        <p id="descripcionInicioSesion" class="visually-hidden">Formulario de inicio de sesión para acceder a tu cuenta de ACNDERS</p>
+
         <div class="mb-3">
           <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control glassy-input" id="email" placeholder="Tucorreo@gmail.com" />
+          <input type="email" class="form-control glassy-input" id="email" name="email" placeholder="tucorreo@gmail.com" autocomplete="email" required aria-required="true" />
         </div>
+
         <div class="mb-3">
           <label for="password" class="form-label">Contraseña</label>
           <div class="position-relative">
-            <input type="password" class="form-control glassy-input pe-5" id="password" placeholder="Debe tener 8 caracteres" />
-            <button type="button" class="btn position-absolute end-0 top-0 mt-1 me-2 text-white">👁</button>
+            <input type="password" class="form-control glassy-input pe-5" id="password" name="password" placeholder="Debe tener 8 caracteres" autocomplete="current-password" required aria-required="true" />
+            <button type="button" class="btn position-absolute end-0 top-0 mt-1 me-2 text-white" aria-label="Mostrar u ocultar contraseña">👁</button>
           </div>
         </div>
+
         <div class="d-flex justify-content-between align-items-center mb-3">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="remember" />
+            <input class="form-check-input" type="checkbox" id="remember" name="remember" />
             <label class="form-check-label" for="remember">Recordarme</label>
           </div>
-          <a href="#" class="text-info small">Olvidé mi contraseña</a>
+          <a href="#" class="text-info small" aria-label="Recuperar contraseña olvidada">Olvidé mi contraseña</a>
         </div>
-        <a type="submit" class="btn btn-neon w-100 mb-3" href="main.html">Registrarse</a>
-        <div class="d-flex justify-content-evenly">
-          <button class="btn btn-outline-light rounded-circle">G</button>
-          <button class="btn btn-outline-light rounded-circle">f</button>
+
+        <a href="main.html" class="btn btn-neon w-100 mb-3" role="button" aria-label="Acceder a tu cuenta">Iniciar Sesión</a>
+
+        <div class="d-flex justify-content-evenly" aria-label="Iniciar sesión con redes sociales">
+          <button class="btn btn-outline-light rounded-circle" aria-label="Iniciar sesión con Google">G</button>
+          <button class="btn btn-outline-light rounded-circle" aria-label="Iniciar sesión con Facebook">f</button>
         </div>
       </form>
-    </div>
+    </section>
   </main>
 </body>
 </html>

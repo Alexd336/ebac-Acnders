@@ -2,9 +2,10 @@
   position: relative;
   padding: 6rem 1rem 3rem;
   background-color: #0a0a0a;
-  background-image:
+  // Ya se añadieron los estilos con la clase CONTAINER
+  /* background-image:
     linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, #000 100%),
-       url('img/diagonal-squares 16.svg');
+       url('img/diagonal-squares 16.svg'); */
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -47,18 +48,15 @@
   .courses {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     gap: 2rem;
     margin: 0 auto;
     max-width: 100%;
     padding-top: 4rem;
-
-    // Limita visualmente a solo 3 elementos visibles
     max-width: 100%;
     overflow: hidden;
   }
 
-  .course-card {
+  .course-cards {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1.5rem;
     overflow: hidden;

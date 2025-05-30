@@ -11,8 +11,11 @@
 </head>
 
 <body>
+
+     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
     <!-- Hero Section con Video Background -->
-    <section class="hero-section">
+    <section class="hero-section"  aria-label="Presentación principal de ACNDERS">
         <!-- Video de fondo -->
         <div class="video-background-container">
             <video autoplay loop muted playsinline class="video-background">
@@ -22,7 +25,7 @@
         </div>
 
         <!-- Header (sobre el video) -->
-        <header class="header">
+        <header class="header"  role="banner">
             <div class="logo">
                 <svg width="150" height="74" viewBox="0 0 116 74" fill="none">
                     <g clip-path="url(#clip0_2799_11785)">
@@ -38,24 +41,29 @@
                     </svg>
             </div>
             
-            <div class="search-bar">
-                <div class="icon-left">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24">
-                        <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
-                    </svg>
-                </div>
-                <input type="text" placeholder="">
-                <div class="icon-right">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3"/>
-                    </svg>
-                </div>
+            <nav role="navigation" aria-label="Navegación principal">
+                <div class="search-bar" role="search">
+                <div class="icon">
+            <a href="#" aria-label="Buscar contenido">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
+                <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
+                </svg>
+            </a>
             </div>
+            <input type="text" placeholder="Buscar..." aria-label="Buscar contenido en ACNDERS" />
+            <div class="icon settings" aria-hidden="true">
+        
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+            </svg>
+            </div>
+            </div>
+            </nav> 
         </header>
 
         <!-- Contenido Hero (sobre el video) -->
         <div class="overlay">
-            <div class="hero-content">
+            <article class="hero-content" aria-labelledby="main-heading">
               <h1>CREA HISTORIAS QUE INSPIRAN Y TRASCIENDEN, DOMINA EL ARTE VISUAL</h1>
               <p>Produce <b>historias</b> visuales que <em>inspiran y dejan huella.</em> Tu plataforma integral para dominar el arte visual.</p>
               
@@ -65,43 +73,49 @@
               </div>
               
               <div class="explore-link-container">
-                <a class="explore-link" href="registrarse.html">Explorar sitio</a>
-                <img src="img/flecha-verde.svg" alt="">
+                <a class="explore-link" href="registrarse.html" tabindex="0" >Explorar sitio</a>
+                <img src="img/flecha-verde.svg" alt="flecha direccion icon" aria-hidden="true">
               </div>
-            </div>
+            </article>
           </div>
     </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Card Sections -->
-        <section class="card-section">
-            <div class="container">
+    <main id="main-content" role="main">
+          <section aria-labelledby="descubre-title">
+            <h2 id="descubre-title" class="visually-hidden">Descubre tu potencial creativo</h2>
+       
+        <section class="card-section"  aria-label="Tarjeta de potencial creativo">
+            <article class="container">
                 <div class="left-section">
-                    <div class="card">
-                        <img src="img/FILM.jpg" alt="Cameraman" class="card-image">
-                        <div class="card-overlay">
+                    <figure class="card">
+                        <img src="img/FILM.jpg" alt="Operador de cámara profesional filmando una escena con equipo cinematográfico" class="card-image">
+                        <figcaption class="card-overlay">
                             <h2 class="card-title">DESCUBRE TU POTENCIAL</h2>
                             <h1 class="card-highlight">CREATIVO</h1>
-                            <button class="card-button">EXPLORAR MÁS</button>
-                        </div>
-                    </div>
+                            <button class="card-button"  tabindex="0">EXPLORAR MÁS</button>
+                        </figcaption>
+                    </figure>
                 </div>
+
                 <div class="right-section">
                     <h2 class="right-title">DESCUBRE LOS SECRETOS AUDIOVISUALES EN</h2>
                     <h1 class="right-highlight">ACNDERS</h1>
-                    <form class="subscribe-form">
-                        <input type="email" placeholder="TuCorreo@ejemplo.com" class="email-input">
-                        <button type="submit" class="submit-button">ENVIAR</button>
+
+                    <form class="subscribe-form" aria-labelledby="newsletter-heading">
+                        <h4 id="newsletter-heading" class="visually-hidden">Suscríbete a nuestro newsletter</h4>
+
+                        <label for="email"  class="visually-hidden">Ingresa tu correo electrónico</label>
+                        <input type="email" id="email" placeholder="TuCorreo@ejemplo.com" class="email-input" required aria-required="true" tabindex="0">
+                        <button type="submit" class="submit-button" tabindex="0" >ENVIAR</button>
                     </form>
                     <p class="form-description">
                         Cada semana te ofrecemos contenidos exclusivos que descomponen las tendencias y técnicas más recientes del mundo audiovisual.
                     </p>
                 </div>
-            </div>
+            </article>
         </section>
 
-        <!-- Repeat similar structure for other card sections -->
+        
         <section class="card-section">
             <div class="container">
                 <div class="left-section">
@@ -115,107 +129,108 @@
                     </div>
                 </div>
                 <div class="right-section">
-                    <!-- Optional content -->
+                    
                 </div>
             </div>
         </section>
 
         <!-- Promotional Section -->
-        <section class="promo-section">
+        <section class="promo-section" aria-labelledby="promo-title">
             <div class="container">
                 <div class="text-content">
-                    <h1>SABEMOS QUE ESTÁS LISTO PARA DESTACAR</h1>
+                    <h1 id="promo-title">SABEMOS QUE ESTÁS LISTO PARA DESTACAR</h1>
                     <p>Accede a nuestros mejores contenidos y da el siguiente paso en tu carrera.</p>
                     <div class="brand">ACNDERS</div>
                     <a href="#" class="btn">INSCRIBIRSE</a>
                 </div>
                 <div class="image-container">
-                    <img src="img/profesores/profesor1.jpg" alt="Promotional Image">
+                    <img src="img/profesores/profesor1.jpg" alt="Instructor de ACNDERS enseñando técnicas audiovisuales">
                 </div>
             </div>
         </section>
 
         <!-- Gallery Section -->
-        <section class="gallery-section">
+        <section class="gallery-section" aria-label="Galería de instructores">
+             <h2 class="visually-hidden">Nuestros instructores</h2>
             <div class="image-container">
-                <img src="img/profesores/profesor2.jpg" alt="Instructor">
+                <img src="img/profesores/profesor2.jpg" alt="Instructor 1 de ACNDERS">
             </div>
             <div class="image-container">
-                <img src="img/profesores/profesor3.jpg" alt="Instructor">
+                <img src="img/profesores/profesor3.jpg" alt="Instructor 2 de ACNDERS">
             </div>
             <div class="image-container">
-                <img src="img/profesores/profesor4.jpg" alt="Instructor">
+                <img src="img/profesores/profesor4.jpg" alt="Instructor 3 de ACNDERS">
             </div>
             <div class="image-container">
-                <img src="img/profesores/profesor5.jpg" alt="Instructor">
+                <img src="img/profesores/profesor5.jpg" alt="Instructor 4 de ACNDERS">
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-section">
                 <h4>Planes y Servicios</h4>
                 <ul>
-                    <li>Plan Mensual</li>
-                    <li>Plan Semestral</li>
-                    <li>Plan Anual</li>
-                    <li>Compras</li>
+                    <li><a href="#">Plan Mensual</a></li>
+                    <li><a href="#">Plan Semestral</a></li>
+                    <li><a href="#">Plan Anual</a></li>
+                    <li><a href="#">Compras</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Por Qué ACNDERS</h4>
                 <ul>
-                    <li>Calidad educativa</li>
-                    <li>Expertos reconocidos</li>
-                    <li>Reseñas</li>
-                    <li>Flexibilidad</li>
+                    <li><a href="#">Calidad educativa</a></li>
+                    <li><a href="#">Expertos reconocidos</a></li>
+                    <li><a href="#">Reseñas</a></li>
+                    <li><a href="#">Flexibilidad</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Trabaja Con Nosotros</h4>
                 <ul>
-                    <li>Cursos</li>
-                    <li>Carreras</li>
-                    <li>Certificaciones</li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Certificaciones</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Centro de Ayuda</h4>
                 <ul>
-                    <li>Contacto</li>
-                    <li>FAQs</li>
-                    <li>Soporte</li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Soporte</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Compañía</h4>
                 <ul>
-                    <li>Acerca de</li>
-                    <li>Noticias</li>
-                    <li>Carreras</li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Carreras</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Legal</h4>
                 <ul>
-                    <li>Términos y Condiciones</li>
-                    <li>Política de Privacidad</li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
                 </ul>
             </div>
 
     
         </div>
-        <div class="social">
-            <a href="#"><i class="icon-youtube"></i></a>
-            <a href="#"><i class="icon-instagram"></i></a>
-            <a href="#"><i class="icon-facebook"></i></a>
-            <a href="#"><i class="icon-tiktok"></i></a>
-            <a href="#"><i class="icon-link"></i></a>
+         <div class="social">
+            <a href="#" aria-label="YouTube"><span class="icon-youtube"></span></a>
+            <a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a>
+            <a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
+            <a href="#" aria-label="TikTok"><span class="icon-tiktok"></span></a>
+            <a href="#" aria-label="LinkedIn"><span class="icon-link"></span></a>
         </div>
         <div class="help-bubble">
-            <button>AYUDA</button>
+            <button aria-label="Ayuda">AYUDA</button>
         </div>
     </footer>
 </body>

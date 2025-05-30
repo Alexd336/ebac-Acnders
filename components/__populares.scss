@@ -1,5 +1,5 @@
 .cursos-populares {
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.5) 50%, #000 100%),
+   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.2) 20%, #000 100%),
                 url('img/diagonal-squares 16.svg');
   padding: 2rem;
   color: white;
@@ -21,8 +21,6 @@
       backdrop-filter: blur(10px);
       padding: 0.5rem;
       width: 200px;
-      
-     
       transition: transform 0.3s ease;
       text-align: center;
       color: white;
