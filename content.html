@@ -16,29 +16,30 @@
 
 <body>
   <!-- HEADER -->
-  <header class="header-v2" >
-        <nav class="nav-v2">
+<header class="header-v2"  role="banner">
+        <nav class="nav-v2" aria-label="Navegación principal">
             <a href="#" class="community-icon">
-                <img src="img/ICONS/COMUNIDAD.png"  href="main.html" alt="Comunidad">
+                <img src="img/ICONS/COMUNIDAD.png"  href="main.html" alt="Ir a la comunidad de ACNDERS">
             </a>
-            <ul class="nav-links">
-                <li><a href="content.html">Cursos</a></li>
-                <li><a href="content.html">Membresías</a></li>
-                <li><a href="content.html">Masters</a></li>
+            <ul class="nav-links" role="menu">
+                <li role="menuitem"><a href="content.html">Cursos</a></li>
+                <li role="menuitem"><a href="content.html">Membresías</a></li>
+                <li role="menuitem"><a href="content.html">Masters</a></li>
             </ul>
             <div class="logo">
-                <a href="index.html">ACNDERS</a>
+                <a href="index.html" aria-label="ACNDERS - Página de inicio">ACNDERS</a>
             </div>
-            <div class="right-elements">
-                <div class="search-bar">
+            <div class="right-elements" >
+                <div class="search-bar"  role="search">
                     <div class="icon">
+                         <button type="button" aria-label="Buscar"></button>
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
                                 <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" />
                             </svg>
                         </a>
                     </div>
-                    <input type="text" placeholder="">
+                    <input type="text" >
                     <div class="icon settings">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
@@ -47,13 +48,12 @@
     
                 </div>
                 <a href="#" class="cart-icon">
-                    <img src="img/ICONS/CARRITO.png" alt="Carrito">
-                </a>
-                <a href="#" class="cart-icon">
                     <img src="img/ICONS/RECORDATORIOS.png" alt="Carrito">
                 </a>
-                
-                <a href="registrarse.html"class="profile-icon">
+                <a href="#" class="cart-icon">
+                    <img src="img/ICONS/CARRITO.png" alt="Carrito">
+                </a>
+                 <a href="registrarse.html" class="profile-icon" aria-label="Perfil de usuario">
                     <img src="img/ICONS/PERFIL.png" alt="Usuario">
                 </a>
             </div>
@@ -61,26 +61,43 @@
     </header>
 
   <!-- MAIN CONTENT -->
-  <main class="site-main">
+  <main class="site-main" id="main-content">
     <!-- FILTROS -->
-    <section class="filters">
-      <h2 class="filters__title">Todos los resultados</h2>
-      <div class="filters__categories">
-        <button class="filters__btn is-active">Producción</button>
-        <button class="filters__btn">Edición</button>
-        <button class="filters__btn">Fotografía</button>
-        <button class="filters__btn">Guionismo</button>
-        <button class="filters__btn">Dirección</button>
+    <section class="filters" aria-labelledby="filters-title">
+      <h2 id="filters-title" class="filters__title">Todos los resultados</h2>
+      <div class="filters__categories" role="tablist" aria-label="Filtrar cursos por categoría">
+        <button class="filters__btn is-active"  role="tab" 
+        aria-selected="true" 
+        aria-controls="produccion-content"
+        id="produccion-tab"
+        >Producción</button>
+        <button class="filters__btn" role="tab" 
+        aria-selected="false" 
+        aria-controls="edicion-content"
+        >Edición</button>
+        <button class="filters__btn" role="tab" 
+        aria-selected="false" 
+        aria-controls="fotografia-content"
+        >Fotografía</button>
+        <button class="filters__btn" role="tab" 
+        aria-selected="false" 
+        aria-controls="guionismo-content">
+        Guionismo</button>
+        <button class="filters__btn" role="tab" 
+        aria-selected="false" 
+        aria-controls="direccion-content">
+        Dirección</button>
       </div>
     </section>
 
-
-
     <!-- GRID DE CURSOS -->
-    <section class="courses">
-      <div class="courses__grid">
+    <section class="courses" aria-labelledby="courses-title">
+       <h2 id="courses-title" class="visually-hidden">Listado de cursos disponibles</h2>
+      <div class="courses__grid" role="grid" aria-rowcount="2" aria-colcount="4">
         <!-- Cada tarjeta -->
-        <article class="course-card" data-id="1">
+        <article class="course-card" data-id="1"
+            role="row"
+            aria-rowindex="1">
           <img
             src="img/collage/corner-left-up.jpg"
             alt="Edición de video profesional"
@@ -91,6 +108,7 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
             <button class="course-card__btn">Añadir</button>
           </div>
         </article>
@@ -106,6 +124,7 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
             <button class="course-card__btn">Añadir</button>
           </div>
         </article>
@@ -121,6 +140,7 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
             <button class="course-card__btn">Añadir</button>
           </div>
         </article>
@@ -136,6 +156,7 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
             <button class="course-card__btn">Añadir</button>
           </div>
         </article>
@@ -151,6 +172,7 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
             <button class="course-card__btn">Añadir</button>
           </div>
         </article>
@@ -166,11 +188,14 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
-            <button class="course-card__btn">Añadir</button>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
+            <button class="course-card__btn" aria-label="Añadir curso de Edición de video profesional al carrito"
+            >Añadir</button>
           </div>
         </article>
 
-        <article class="course-card" data-id="7">
+        <article class="course-card" data-id="7" role="row"
+        aria-rowindex="1">
           <img
             src="img/collage/CORNER-LEFT-UP.jpg"
             alt="Edición de video profesional"
@@ -181,6 +206,7 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
             <button class="course-card__btn">Añadir</button>
           </div>
         </article>
@@ -196,6 +222,7 @@
               Edición de video profesional
             </h3>
             <p class="course-card__price">$1,893.44</p>
+             <span class="visually-hidden">1,893 pesos mexicanos</span>
             <button class="course-card__btn">Añadir</button>
           </div>
         </article>
@@ -211,68 +238,95 @@
 </div>
 
 <!-- RECOMENDADOS -->
-<section class="recommendations">
-  <h2 class="recommendations__title">Te puede interesar</h2>
+<section class="recommendations" aria-labelledby="recommendations-heading">
+  <div class="recommendations__header">
+    <h2 id="recommendations-heading" class="recommendations__title">Te puede interesar</h2>
+    <div class="carousel-controls" aria-label="Controles del carrusel">
+      <span class="visually-hidden" aria-live="polite">Mostrando cursos recomendados 1 de 3</span>
+    </div>
+  </div>
 
   <div class="recommendations__carousel">
     <!-- FLECHA IZQUIERDA -->
-    <button class="carousel__arrow carousel__arrow--left">&#8249;</button>
+    <button 
+      class="carousel__arrow carousel__arrow--left" 
+      aria-label="Anterior curso recomendado"
+      disabled
+    >
+      <span aria-hidden="true">&#8249;</span>
+    </button>
 
     <!-- CONTENEDOR DE CARDS -->
-    <div class="carousel__track">
-      <article class="course-card" data-id="9">
+    <div 
+      class="carousel__track" 
+      role="list" 
+      aria-live="polite"
+      tabindex="0"
+    >
+      <article class="course-card" data-id="9" role="listitem">
         <img
           src="img/collage/corner-left-up.jpg"
-          alt="Edición de video profesional"
+          alt="Instructor trabajando en estación de edición profesional con dos monitores"
           class="course-card__image"
         />
         <div class="course-card__info">
           <h3 class="course-card__title">Edición de video profesional</h3>
-          <p class="course-card__price">$1,893.44</p>
-          <button class="course-card__btn">
-            Añadir <i class="icon-cart"></i>
+          <p class="course-card__price">
+            <span aria-hidden="true">$1,893.44</span>
+            <span class="visually-hidden">1,893 pesos mexicanos</span>
+          </p>
+          <button class="course-card__btn" aria-label="Añadir 'Edición de video profesional' al carrito">
+            Añadir <i class="icon-cart" aria-hidden="true"></i>
           </button>
         </div>
       </article>
 
-      <article class="course-card" data-id="10">
+      <article class="course-card" data-id="10" role="listitem">
         <img
           src="img/collage/corner-left-up.jpg"
-          alt="Edición de video profesional"
+          alt="Equipo de producción filmando escena con cámara profesional en estudio"
           class="course-card__image"
         />
         <div class="course-card__info">
           <h3 class="course-card__title">Edición de video profesional</h3>
-          <p class="course-card__price">$1,893.44</p>
-          <button class="course-card__btn">
-            Añadir <i class="icon-cart"></i>
+          <p class="course-card__price">
+            <span aria-hidden="true">$1,893.44</span>
+            <span class="visually-hidden">1,893 pesos mexicanos</span>
+          </p>
+          <button class="course-card__btn" aria-label="Añadir 'Edición de video profesional' al carrito">
+            Añadir <i class="icon-cart" aria-hidden="true"></i>
           </button>
         </div>
       </article>
 
-       <article class="course-card" data-id="11">
+      <article class="course-card" data-id="11" role="listitem">
         <img
           src="img/collage/corner-left-up.jpg"
-          alt="Edición de video profesional"
+          alt="Artista trabajando en efectos visuales avanzados en computadora"
           class="course-card__image"
         />
         <div class="course-card__info">
           <h3 class="course-card__title">Edición de video profesional</h3>
-          <p class="course-card__price">$1,893.44</p>
-          <button class="course-card__btn">
-            Añadir <i class="icon-cart"></i>
+          <p class="course-card__price">
+            <span aria-hidden="true">$1,893.44</span>
+            <span class="visually-hidden">1,893 pesos mexicanos</span>
+          </p>
+          <button class="course-card__btn" aria-label="Añadir 'Edición de video profesional' al carrito">
+            Añadir <i class="icon-cart" aria-hidden="true"></i>
           </button>
         </div>
       </article>
-
-     
     </div>
 
     <!-- FLECHA DERECHA -->
-    <button class="carousel__arrow carousel__arrow--right">&#8250;</button>
+    <button 
+      class="carousel__arrow carousel__arrow--right" 
+      aria-label="Siguiente curso recomendado"
+    >
+      <span aria-hidden="true">&#8250;</span>
+    </button>
   </div>
 </section>
-
 
         <!-- Carrito de compras -->
 <div id="cartOverlay" class="cart-overlay" aria-hidden="true"></div>
@@ -317,70 +371,70 @@ rightBtn.addEventListener('click', () => {
 </script>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+   <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-section">
                 <h4>Planes y Servicios</h4>
                 <ul>
-                    <li>Plan Mensual</li>
-                    <li>Plan Semestral</li>
-                    <li>Plan Anual</li>
-                    <li>Compras</li>
+                    <li><a href="#">Plan Mensual</a></li>
+                    <li><a href="#">Plan Semestral</a></li>
+                    <li><a href="#">Plan Anual</a></li>
+                    <li><a href="#">Compras</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Por Qué ACNDERS</h4>
                 <ul>
-                    <li>Calidad educativa</li>
-                    <li>Expertos reconocidos</li>
-                    <li>Reseñas</li>
-                    <li>Flexibilidad</li>
+                    <li><a href="#">Calidad educativa</a></li>
+                    <li><a href="#">Expertos reconocidos</a></li>
+                    <li><a href="#">Reseñas</a></li>
+                    <li><a href="#">Flexibilidad</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Trabaja Con Nosotros</h4>
                 <ul>
-                    <li>Cursos</li>
-                    <li>Carreras</li>
-                    <li>Certificaciones</li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Certificaciones</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Centro de Ayuda</h4>
                 <ul>
-                    <li>Contacto</li>
-                    <li>FAQs</li>
-                    <li>Soporte</li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Soporte</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Compañía</h4>
                 <ul>
-                    <li>Acerca de</li>
-                    <li>Noticias</li>
-                    <li>Carreras</li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Carreras</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Legal</h4>
                 <ul>
-                    <li>Términos y Condiciones</li>
-                    <li>Política de Privacidad</li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
                 </ul>
             </div>
 
     
         </div>
-        <div class="social">
-            <a href="#"><i class="icon-youtube"></i></a>
-            <a href="#"><i class="icon-instagram"></i></a>
-            <a href="#"><i class="icon-facebook"></i></a>
-            <a href="#"><i class="icon-tiktok"></i></a>
-            <a href="#"><i class="icon-link"></i></a>
+         <div class="social">
+            <a href="#" aria-label="YouTube"><span class="icon-youtube"></span></a>
+            <a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a>
+            <a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
+            <a href="#" aria-label="TikTok"><span class="icon-tiktok"></span></a>
+            <a href="#" aria-label="LinkedIn"><span class="icon-link"></span></a>
         </div>
         <div class="help-bubble">
-            <button>AYUDA</button>
+            <button aria-label="Ayuda">AYUDA</button>
         </div>
     </footer>
 
